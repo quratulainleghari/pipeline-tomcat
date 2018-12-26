@@ -1,5 +1,5 @@
 pipeline {
-    agent any
+    agent {label: tomcat}
     tools {
         maven 'maven'
         jdk '1.8'
