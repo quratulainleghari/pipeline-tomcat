@@ -2,7 +2,7 @@ node{
    
    tools {
         maven 'maven'
-        jdk '1.8'
+        //jdk '1.8'
     }
     stages {
         stage ('Initialize') {
