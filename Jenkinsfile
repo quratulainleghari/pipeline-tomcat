@@ -43,6 +43,7 @@ pipeline {
         //sh 'scp -o StrictHostKeyChecking=no target/*.war ubuntu@34.206.54.129:/opt/tomcat/apache-tomcat-8.5.37/webapps/'
        
          sh 'scp  /home/jenkins/workspace/pipeline-tomcat/target/*.war /opt/tomcat/apache-tomcat-8.5.37/webapps/'
+         echo "password for jenkins is $Ytrewq123@#"
      // }
    }
    }
