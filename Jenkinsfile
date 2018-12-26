@@ -15,8 +15,6 @@ pipeline {
             }
         }
 
-      
-    
        
       
       stage ('SCM Checkout') {
@@ -24,6 +22,7 @@ pipeline {
                 git "https://github.com/javahometech/my-app"
               //sh 'mvn clean package'
             }
+      }
   // stage('SCM Checkout'){
      // steps {
      //git 'https://github.com/javahometech/my-app'
