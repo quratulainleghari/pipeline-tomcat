@@ -33,7 +33,7 @@ pipeline {
       steps {
      // def mvnHome =  tool name: 'maven', type: 'maven'   
       //sh "${mvnHome}/bin/mvn package"
-         sh 'mvn clean package'
+         sh 'clean package'
    }
    }
    stage('Deploy to Tomcat'){
