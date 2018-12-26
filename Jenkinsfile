@@ -47,13 +47,13 @@ pipeline {
      // }
    }
    }
-   stage('Email Notification'){
-      steps {
-      mail bcc: '', body: '''Hi Welcome to jenkins email alerts
-      Thanks
-      Qurat''', cc: '', from: '', replyTo: '', subject: 'Jenkins Job', to: 'qurat@royalcyber.com'
-   }
-   }
+   //stage('Email Notification'){
+     // steps {
+      //mail bcc: '', body: '''Hi Welcome to jenkins email alerts
+      //Thanks
+      //Qurat''', cc: '', from: '', replyTo: '', subject: 'Jenkins Job', to: 'qurat@royalcyber.com'
+   //}
+   //}
       }
    }
 
