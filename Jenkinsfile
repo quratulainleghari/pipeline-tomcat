@@ -31,8 +31,9 @@ pipeline {
    stage('Compile-Package'){
       // Get maven home path
       steps {
-      def mvnHome =  tool name: 'maven', type: 'maven'   
-      sh "${mvnHome}/bin/mvn package"
+     // def mvnHome =  tool name: 'maven', type: 'maven'   
+      //sh "${mvnHome}/bin/mvn package"
+         sh 'mvn clean package'
    }
    }
    stage('Deploy to Tomcat'){
