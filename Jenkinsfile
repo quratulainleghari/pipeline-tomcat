@@ -1,13 +1,36 @@
 pipeline {
    agent {label "tomcat"}
     
+    tools {
+        maven 'maven'
+        jdk '1.8'
+    }
+    stages {
+        stage ('Initialize') {
+            steps {
+                sh '''
+                    echo "PATH = ${PATH}"
+                    echo "M2_HOME = ${M2_HOME}"
+                '''
+            }
+        }
 
+      
+    
+       
+       
    stages {
-   stage('SCM Checkout'){
-      steps {
-     git 'https://github.com/javahometech/my-app'
-   }
-   }
+      
+      stage ('SCM Checkout') {
+            steps {
+                git "https://github.com/javahometech/my-app"
+              //sh 'mvn clean package'
+            }
+  // stage('SCM Checkout'){
+     // steps {
+     //git 'https://github.com/javahometech/my-app'
+  // }
+  // }
    stage('Compile-Package'){
       // Get maven home path
       steps {
