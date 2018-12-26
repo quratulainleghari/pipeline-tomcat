@@ -53,6 +53,7 @@ pipeline {
       Qurat''', cc: '', from: '', replyTo: '', subject: 'Jenkins Job', to: 'qurat@royalcyber.com'
    }
    }
+      }
 
 }
 }
