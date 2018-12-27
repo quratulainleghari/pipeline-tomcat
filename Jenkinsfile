@@ -32,6 +32,7 @@ pipeline {
        
          sh 'sudo cp /home/jenkins/workspace/pipeline-tomcat/target/*.war /opt/tomcat/apache-tomcat-8.5.37/webapps/'
          sh 'sudo rm -rf ROOT.war'
+         sh 'sleep 30'
         sh 'sudo mv /opt/tomcat/apache-tomcat-8.5.37/webapps/*.war /opt/tomcat/apache-tomcat-8.5.37/webapps/ROOT.war'
      // }
    }
