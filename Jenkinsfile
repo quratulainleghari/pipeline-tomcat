@@ -17,25 +17,13 @@ pipeline {
 
        
       
-      stage ('SCM Checkout') {
+      stage ('Compile-Package') {
             steps {
                 git "https://github.com/javahometech/my-app"
-              //sh 'mvn clean package'
+              sh 'mvn clean package'
             }
       }
-  // stage('SCM Checkout'){
-     // steps {
-     //git 'https://github.com/javahometech/my-app'
-  // }
-  // }
-   stage('Compile-Package'){
-      // Get maven home path
-      steps {
-     // def mvnHome =  tool name: 'maven', type: 'maven'   
-      //sh "${mvnHome}/bin/mvn package"
-         sh 'mvn clean package'
-   }
-   }
+  
    stage('Deploy to Tomcat'){
       steps {
       
@@ -47,13 +35,13 @@ pipeline {
      // }
    }
    }
-   //stage('Email Notification'){
-     // steps {
-      //mail bcc: '', body: '''Hi Welcome to jenkins email alerts
-      //Thanks
-      //Qurat''', cc: '', from: '', replyTo: '', subject: 'Jenkins Job', to: 'qurat@royalcyber.com'
-   //}
-   //}
+   stage('Email Notification'){
+     steps {
+     mail bcc: '', body: '''Hi Welcome to jenkins email alerts
+     Thanks
+      Qurat''', cc: '', from: '', replyTo: '', subject: 'Jenkins Job', to: 'leghari.quratulain@gmail.com'
+   }
+  }
       }
    }
 
