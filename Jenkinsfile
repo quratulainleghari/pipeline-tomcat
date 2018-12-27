@@ -31,19 +31,13 @@ pipeline {
         //sh 'scp -o StrictHostKeyChecking=no target/*.war ubuntu@34.206.54.129:/opt/tomcat/apache-tomcat-8.5.37/webapps/'
        
          sh 'sudo cp /home/jenkins/workspace/pipeline-tomcat/target/*.war /opt/tomcat/apache-tomcat-8.5.37/webapps/'
-         sh 'sudo rm -rf ROOT.war'
-         sh 'sleep 30'
-        sh 'sudo mv /opt/tomcat/apache-tomcat-8.5.37/webapps/*.war /opt/tomcat/apache-tomcat-8.5.37/webapps/ROOT.war'
+        // sh 'sudo rm -rf ROOT.war'
+         //sh 'sleep 30'
+        //sh 'sudo mv /opt/tomcat/apache-tomcat-8.5.37/webapps/*.war /opt/tomcat/apache-tomcat-8.5.37/webapps/ROOT.war'
      // }
    }
    }
-   //stage('Email Notification'){
-     //steps {
-    // mail bcc: '', body: '''Hi Welcome to jenkins email alerts
-    // Thanks
-      //Qurat''', cc: '', from: '', replyTo: '', subject: 'Jenkins Job', to: 'leghari.quratulain@gmail.com'
-   //}
-  //}
+  
        stage ('Email Notification'){
           steps{
       emailext (
