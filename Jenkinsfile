@@ -35,13 +35,13 @@ pipeline {
      // }
    }
    }
-   stage('Email Notification'){
-     steps {
-     mail bcc: '', body: '''Hi Welcome to jenkins email alerts
-     Thanks
-      Qurat''', cc: '', from: '', replyTo: '', subject: 'Jenkins Job', to: 'leghari.quratulain@gmail.com'
-   }
-  }
+   //stage('Email Notification'){
+     //steps {
+    // mail bcc: '', body: '''Hi Welcome to jenkins email alerts
+    // Thanks
+      //Qurat''', cc: '', from: '', replyTo: '', subject: 'Jenkins Job', to: 'leghari.quratulain@gmail.com'
+   //}
+  //}
       }
    }
 
