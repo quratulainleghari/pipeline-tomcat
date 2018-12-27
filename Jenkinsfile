@@ -31,10 +31,7 @@ pipeline {
         //sh 'scp -o StrictHostKeyChecking=no target/*.war ubuntu@34.206.54.129:/opt/tomcat/apache-tomcat-8.5.37/webapps/'
        
          sh 'sudo cp /home/jenkins/workspace/pipeline-tomcat/target/*.war /opt/tomcat/apache-tomcat-8.5.37/webapps/'
-         sh 'cd /opt/tomcat/apache-tomcat-8.5.37/webapps/'
-         sh 'sudo rm -rf ROOT.war'
          
-         sh 'sudo mv *.war ROOT.war'
          
         //sh 'sudo mv /opt/tomcat/apache-tomcat-8.5.37/webapps/*.war /opt/tomcat/apache-tomcat-8.5.37/webapps/ROOT.war'
      // }
