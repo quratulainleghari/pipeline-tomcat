@@ -34,7 +34,7 @@ pipeline {
          sh 'cd /opt/tomcat/apache-tomcat-8.5.37/webapps/'
          sh 'sudo rm -rf ROOT.war'
          
-         sh 'sudo mv myweb-0.0.5.war ROOT.war'
+         sh 'sudo mv *.war ROOT.war'
          
         //sh 'sudo mv /opt/tomcat/apache-tomcat-8.5.37/webapps/*.war /opt/tomcat/apache-tomcat-8.5.37/webapps/ROOT.war'
      // }
